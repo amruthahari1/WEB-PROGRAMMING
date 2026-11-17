@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>Mouse Over Event</title>
+<style>
+body {
+text-align: center;
+font-family: Arial;
+background-color:lavender;
+padding-top: 50px;
+}
+img {
+width: 350px;
+height: 280px;
+border-radius: 10px;
+}
+h2 {
+color: black;
+}
+</style>
+</head>
+<body>
+<h2><u>Mouse Over Event Example</u></h2>
+<div onmouseover="changeContent()" onmouseout="restoreContent()">
+<img id="myImage" src="/home/ksb/Pictures/Wallpapers/image.jpg">
+<h3 id="myText">Move Mouse Over Me</h3>
+</div>
+<script>
+function changeContent() {
+    document.getElementById("myImage").src="/home/ksb/Pictures/Wallpapers/image2.jpg";
+    document.getElementById("myText").innerHTML="Welcome! You moved the mouse over the image.";
+}
+function restoreContent() {
+    document.getElementById("myImage").src="/home/ksb/Pictures/Wallpapers/image.jpg";
+    document.getElementById("myText").innerHTML ="Move Mouse Over Me";
+}
+</script>
+</body>
+</html>
